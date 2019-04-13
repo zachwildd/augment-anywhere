@@ -9,6 +9,7 @@
 import UIKit
 import ARKit
 import SceneKit
+import PureLayout
 
 class ARSceneView: ARSCNView {
     
@@ -19,6 +20,8 @@ class ARSceneView: ARSCNView {
      // Drawing code
      }
      */
+    
+    var backButton: UIButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,7 +40,17 @@ class ARSceneView: ARSCNView {
     }
     
     func setup() {
-        print("do nothing")
+        print("arsceneview setup")
+        
+        backButton.backgroundColor = UIColor.red
+        backButton.autoSetDimension(.height, toSize: 100)
+        backButton.autoSetDimension(.width, toSize: 100)
+        addSubview(backButton)
+        backButton.autoCenterInSuperview()
+    }
+    
+    func setupActions() {
+        
     }
     
 }

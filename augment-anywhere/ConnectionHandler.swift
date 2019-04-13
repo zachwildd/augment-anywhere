@@ -9,6 +9,7 @@
 import Foundation
 import Starscream
 import SwiftyJSON
+import UIKit
 
 protocol ConnectionDelegate {
     func didRecieveMessage(type: String, data: JSON)
@@ -38,6 +39,13 @@ class ConnectionHandler: WebSocketDelegate {
         // do nothing?
         print("connected to server")
         socket.write(string: "hello server")
+        
+        // encode anchor to base64 and send it over websocket
+        let image = UIImage(named: "bitcamp")
+        let imageData = image!.pngData()
+        let strBase64 = imageData?.base64EncodedString()
+        socket.write(string: strBase64!)
+        
     }
     
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {

@@ -13,6 +13,9 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
+    
+    var backButton: UIButton = UIButton()
+    
     var connectionHandler: ConnectionHandler = ConnectionHandler.sharedInstance
     
     override func viewDidLoad() {
@@ -46,6 +49,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Run the view's session
         sceneView.session.run(configuration)
+        
+        setupUI()
+        setupActions()
     }
     
     func loadImage() -> ARReferenceImage {
@@ -94,6 +100,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // add box to node
         node.addChildNode(boxNode)
+    }
+    
+    
+    func setupUI() {
+        print("arsceneview setup")
+        
+        backButton.backgroundColor = UIColor.red
+        backButton.autoSetDimension(.height, toSize: 100)
+        backButton.autoSetDimension(.width, toSize: 100)
+        view?.addSubview(backButton)
+        backButton.autoCenterInSuperview()
+    }
+    
+    func setupActions() {
+        backButton.addTarget(self, action: #selector(presentLoginVC), for: .touchUpInside)
+    }
+    
+    @objc func presentLoginVC() {
+        performSegue(withIdentifier: "loginVC", sender: self)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

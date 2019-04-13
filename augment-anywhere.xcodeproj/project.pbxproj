@@ -17,6 +17,7 @@
 		92A121302261D39B002A2C1B /* augment_anywhereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1212F2261D39B002A2C1B /* augment_anywhereUITests.swift */; };
 		92A1213E2261D3BF002A2C1B /* ARSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1213D2261D3BF002A2C1B /* ARSceneView.swift */; };
 		92D803F92261D630009A2C3E /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D803F82261D630009A2C3E /* ConnectionHandler.swift */; };
+		92D803FB226233DD009A2C3E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D803FA226233DD009A2C3E /* LoginViewController.swift */; };
 		A65225EE7FB1AC443BEE0172 /* Pods_augment_anywhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E04E690F7C0FBD97909643 /* Pods_augment_anywhere.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		92A121312261D39B002A2C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92A1213D2261D3BF002A2C1B /* ARSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneView.swift; sourceTree = "<group>"; };
 		92D803F82261D630009A2C3E /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
+		92D803FA226233DD009A2C3E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9908F833BFA2A8C9F37B0DED /* Pods-augment-anywhere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-anywhere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6B11CFB703BEB49C5CD540 /* Pods-augment-anywhere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-anywhere.release.xcconfig"; path = "Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				92A121182261D39B002A2C1B /* LaunchScreen.storyboard */,
 				92A1211B2261D39B002A2C1B /* Info.plist */,
 				92D803F82261D630009A2C3E /* ConnectionHandler.swift */,
+				92D803FA226233DD009A2C3E /* LoginViewController.swift */,
 			);
 			path = "augment-anywhere";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -305,6 +309,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -346,6 +351,7 @@
 				92D803F92261D630009A2C3E /* ConnectionHandler.swift in Sources */,
 				92A121122261D39A002A2C1B /* ViewController.swift in Sources */,
 				92A1210E2261D39A002A2C1B /* AppDelegate.swift in Sources */,
+				92D803FB226233DD009A2C3E /* LoginViewController.swift in Sources */,
 				92A1213E2261D3BF002A2C1B /* ARSceneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

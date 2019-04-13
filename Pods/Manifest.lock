@@ -1,24 +1,28 @@
 PODS:
+  - PureLayout (3.1.4)
   - Socket.IO-Client-Swift (15.0.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.0)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - PureLayout
   - Socket.IO-Client-Swift (~> 15.0.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - PureLayout
     - Socket.IO-Client-Swift
     - Starscream
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   Socket.IO-Client-Swift: c039a808195d22a7192962841b8c035cb61ea49e
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 92b44189c74a88c08ecf31932a8c0fc78a6d7b17
+PODFILE CHECKSUM: 4d5b43105b47027b2510c63442d033bf0433f949
 
 COCOAPODS: 1.5.3
