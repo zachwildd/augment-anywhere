@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92A1210E2261D39A002A2C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1210D2261D39A002A2C1B /* AppDelegate.swift */; };
+		92A121102261D39A002A2C1B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A1210F2261D39A002A2C1B /* art.scnassets */; };
+		92A121122261D39A002A2C1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A121112261D39A002A2C1B /* ViewController.swift */; };
+		92A121152261D39A002A2C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A121132261D39A002A2C1B /* Main.storyboard */; };
+		92A121172261D39B002A2C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A121162261D39B002A2C1B /* Assets.xcassets */; };
+		92A1211A2261D39B002A2C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A121182261D39B002A2C1B /* LaunchScreen.storyboard */; };
+		92A121252261D39B002A2C1B /* augment_anywhereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A121242261D39B002A2C1B /* augment_anywhereTests.swift */; };
+		92A121302261D39B002A2C1B /* augment_anywhereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1212F2261D39B002A2C1B /* augment_anywhereUITests.swift */; };
+		92A1213E2261D3BF002A2C1B /* ARSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1213D2261D3BF002A2C1B /* ARSceneView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92A121212261D39B002A2C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92A121022261D39A002A2C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92A121092261D39A002A2C1B;
+			remoteInfo = "augment-anywhere";
+		};
+		92A1212C2261D39B002A2C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92A121022261D39A002A2C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92A121092261D39A002A2C1B;
+			remoteInfo = "augment-anywhere";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92A1210A2261D39A002A2C1B /* augment-anywhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "augment-anywhere.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A1210D2261D39A002A2C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92A1210F2261D39A002A2C1B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		92A121112261D39A002A2C1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92A121142261D39A002A2C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92A121162261D39B002A2C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92A121192261D39B002A2C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92A1211B2261D39B002A2C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A121202261D39B002A2C1B /* augment-anywhereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "augment-anywhereTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A121242261D39B002A2C1B /* augment_anywhereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = augment_anywhereTests.swift; sourceTree = "<group>"; };
+		92A121262261D39B002A2C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A1212B2261D39B002A2C1B /* augment-anywhereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "augment-anywhereUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A1212F2261D39B002A2C1B /* augment_anywhereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = augment_anywhereUITests.swift; sourceTree = "<group>"; };
+		92A121312261D39B002A2C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A1213D2261D3BF002A2C1B /* ARSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92A121072261D39A002A2C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A1211D2261D39B002A2C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A121282261D39B002A2C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92A121012261D39A002A2C1B = {
+			isa = PBXGroup;
+			children = (
+				92A1210C2261D39A002A2C1B /* augment-anywhere */,
+				92A121232261D39B002A2C1B /* augment-anywhereTests */,
+				92A1212E2261D39B002A2C1B /* augment-anywhereUITests */,
+				92A1210B2261D39A002A2C1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92A1210B2261D39A002A2C1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92A1210A2261D39A002A2C1B /* augment-anywhere.app */,
+				92A121202261D39B002A2C1B /* augment-anywhereTests.xctest */,
+				92A1212B2261D39B002A2C1B /* augment-anywhereUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92A1210C2261D39A002A2C1B /* augment-anywhere */ = {
+			isa = PBXGroup;
+			children = (
+				92A1210D2261D39A002A2C1B /* AppDelegate.swift */,
+				92A1210F2261D39A002A2C1B /* art.scnassets */,
+				92A121112261D39A002A2C1B /* ViewController.swift */,
+				92A1213D2261D3BF002A2C1B /* ARSceneView.swift */,
+				92A121132261D39A002A2C1B /* Main.storyboard */,
+				92A121162261D39B002A2C1B /* Assets.xcassets */,
+				92A121182261D39B002A2C1B /* LaunchScreen.storyboard */,
+				92A1211B2261D39B002A2C1B /* Info.plist */,
+			);
+			path = "augment-anywhere";
+			sourceTree = "<group>";
+		};
+		92A121232261D39B002A2C1B /* augment-anywhereTests */ = {
+			isa = PBXGroup;
+			children = (
+				92A121242261D39B002A2C1B /* augment_anywhereTests.swift */,
+				92A121262261D39B002A2C1B /* Info.plist */,
+			);
+			path = "augment-anywhereTests";
+			sourceTree = "<group>";
+		};
+		92A1212E2261D39B002A2C1B /* augment-anywhereUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92A1212F2261D39B002A2C1B /* augment_anywhereUITests.swift */,
+				92A121312261D39B002A2C1B /* Info.plist */,
+			);
+			path = "augment-anywhereUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92A121092261D39A002A2C1B /* augment-anywhere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A121342261D39B002A2C1B /* Build configuration list for PBXNativeTarget "augment-anywhere" */;
+			buildPhases = (
+				92A121062261D39A002A2C1B /* Sources */,
+				92A121072261D39A002A2C1B /* Frameworks */,
+				92A121082261D39A002A2C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "augment-anywhere";
+			productName = "augment-anywhere";
+			productReference = 92A1210A2261D39A002A2C1B /* augment-anywhere.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92A1211F2261D39B002A2C1B /* augment-anywhereTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A121372261D39B002A2C1B /* Build configuration list for PBXNativeTarget "augment-anywhereTests" */;
+			buildPhases = (
+				92A1211C2261D39B002A2C1B /* Sources */,
+				92A1211D2261D39B002A2C1B /* Frameworks */,
+				92A1211E2261D39B002A2C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92A121222261D39B002A2C1B /* PBXTargetDependency */,
+			);
+			name = "augment-anywhereTests";
+			productName = "augment-anywhereTests";
+			productReference = 92A121202261D39B002A2C1B /* augment-anywhereTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92A1212A2261D39B002A2C1B /* augment-anywhereUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A1213A2261D39B002A2C1B /* Build configuration list for PBXNativeTarget "augment-anywhereUITests" */;
+			buildPhases = (
+				92A121272261D39B002A2C1B /* Sources */,
+				92A121282261D39B002A2C1B /* Frameworks */,
+				92A121292261D39B002A2C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92A1212D2261D39B002A2C1B /* PBXTargetDependency */,
+			);
+			name = "augment-anywhereUITests";
+			productName = "augment-anywhereUITests";
+			productReference = 92A1212B2261D39B002A2C1B /* augment-anywhereUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92A121022261D39A002A2C1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = zach;
+				TargetAttributes = {
+					92A121092261D39A002A2C1B = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					92A1211F2261D39B002A2C1B = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 92A121092261D39A002A2C1B;
+					};
+					92A1212A2261D39B002A2C1B = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 92A121092261D39A002A2C1B;
+					};
+				};
+			};
+			buildConfigurationList = 92A121052261D39A002A2C1B /* Build configuration list for PBXProject "augment-anywhere" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92A121012261D39A002A2C1B;
+			productRefGroup = 92A1210B2261D39A002A2C1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92A121092261D39A002A2C1B /* augment-anywhere */,
+				92A1211F2261D39B002A2C1B /* augment-anywhereTests */,
+				92A1212A2261D39B002A2C1B /* augment-anywhereUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92A121082261D39A002A2C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A121102261D39A002A2C1B /* art.scnassets in Resources */,
+				92A1211A2261D39B002A2C1B /* LaunchScreen.storyboard in Resources */,
+				92A121172261D39B002A2C1B /* Assets.xcassets in Resources */,
+				92A121152261D39A002A2C1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A1211E2261D39B002A2C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A121292261D39B002A2C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92A121062261D39A002A2C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A121122261D39A002A2C1B /* ViewController.swift in Sources */,
+				92A1210E2261D39A002A2C1B /* AppDelegate.swift in Sources */,
+				92A1213E2261D3BF002A2C1B /* ARSceneView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A1211C2261D39B002A2C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A121252261D39B002A2C1B /* augment_anywhereTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A121272261D39B002A2C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A121302261D39B002A2C1B /* augment_anywhereUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92A121222261D39B002A2C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92A121092261D39A002A2C1B /* augment-anywhere */;
+			targetProxy = 92A121212261D39B002A2C1B /* PBXContainerItemProxy */;
+		};
+		92A1212D2261D39B002A2C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92A121092261D39A002A2C1B /* augment-anywhere */;
+			targetProxy = 92A1212C2261D39B002A2C1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92A121132261D39A002A2C1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92A121142261D39A002A2C1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92A121182261D39B002A2C1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92A121192261D39B002A2C1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92A121322261D39B002A2C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92A121332261D39B002A2C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92A121352261D39B002A2C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32BZ4HSFX3;
+				INFOPLIST_FILE = "augment-anywhere/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zach.augment-anywhere";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92A121362261D39B002A2C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32BZ4HSFX3;
+				INFOPLIST_FILE = "augment-anywhere/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zach.augment-anywhere";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92A121382261D39B002A2C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "augment-anywhereTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zach.augment-anywhereTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/augment-anywhere.app/augment-anywhere";
+			};
+			name = Debug;
+		};
+		92A121392261D39B002A2C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "augment-anywhereTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zach.augment-anywhereTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/augment-anywhere.app/augment-anywhere";
+			};
+			name = Release;
+		};
+		92A1213B2261D39B002A2C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "augment-anywhereUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zach.augment-anywhereUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "augment-anywhere";
+			};
+			name = Debug;
+		};
+		92A1213C2261D39B002A2C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "augment-anywhereUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zach.augment-anywhereUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "augment-anywhere";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92A121052261D39A002A2C1B /* Build configuration list for PBXProject "augment-anywhere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A121322261D39B002A2C1B /* Debug */,
+				92A121332261D39B002A2C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92A121342261D39B002A2C1B /* Build configuration list for PBXNativeTarget "augment-anywhere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A121352261D39B002A2C1B /* Debug */,
+				92A121362261D39B002A2C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92A121372261D39B002A2C1B /* Build configuration list for PBXNativeTarget "augment-anywhereTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A121382261D39B002A2C1B /* Debug */,
+				92A121392261D39B002A2C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92A1213A2261D39B002A2C1B /* Build configuration list for PBXNativeTarget "augment-anywhereUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A1213B2261D39B002A2C1B /* Debug */,
+				92A1213C2261D39B002A2C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92A121022261D39A002A2C1B /* Project object */;
+}
