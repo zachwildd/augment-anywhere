@@ -10,11 +10,13 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
     var backButton: UIButton = UIButton()
+    
+    var referenceImages: Set<ARReferenceImage> = Set<ARReferenceImage>()
     
     var connectionHandler: ConnectionHandler = ConnectionHandler.sharedInstance
     
@@ -32,14 +34,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         view.addSubview(sceneView)
+        
+        connectionHandler.delegate = self
+        connectionHandler.mockRecieveNewTargetMessage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        var referenceImages: Set<ARReferenceImage> = Set<ARReferenceImage>()
-        let arImage = loadImage()
-        referenceImages.insert(arImage)
         
         // Create a session configuration
         let configuration = ARImageTrackingConfiguration()
@@ -54,11 +55,35 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         setupActions()
     }
     
-    func loadImage() -> ARReferenceImage {
+    func didRecieveTarget(base64: String) {
+        
+        let imageDecoded:NSData = NSData(base64Encoded: base64, options: NSData.Base64DecodingOptions(rawValue: 0))!
+        let decodedimage:UIImage = UIImage(data: imageDecoded as Data)!
+        
+        addTarget(image: decodedimage)
+    }
+    
+    func loadImage(image: UIImage) -> ARReferenceImage {
         let targetImage: UIImage = UIImage(named: "bitcamp")!
         let arImage = ARReferenceImage(targetImage.cgImage!, orientation: CGImagePropertyOrientation.up, physicalWidth: 0.15)
         arImage.name = "bitcamp"
         return arImage
+    }
+    
+    func addTarget(image: UIImage) {
+        var referenceImage = loadImage(image: image)
+        referenceImages.insert(referenceImage)
+        resetTracking()
+    }
+    
+    func resetTracking() {
+        // Create a session configuration
+        let configuration = ARImageTrackingConfiguration()
+        
+        configuration.trackingImages = referenceImages
+        configuration.maximumNumberOfTrackedImages = 1
+        
+        sceneView.session.run(configuration)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

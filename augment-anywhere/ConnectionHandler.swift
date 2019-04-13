@@ -12,7 +12,7 @@ import SwiftyJSON
 import UIKit
 
 protocol ConnectionDelegate {
-    func didRecieveMessage(type: String, data: JSON)
+    func didRecieveTarget(base64: String)
 }
 
 class ConnectionHandler: WebSocketDelegate {
@@ -46,6 +46,13 @@ class ConnectionHandler: WebSocketDelegate {
         let strBase64 = imageData?.base64EncodedString()
         socket.write(string: strBase64!)
         
+    }
+    
+    func mockRecieveNewTargetMessage() {
+        let image = UIImage(named: "bitcamp")
+        let imageData = image!.pngData()
+        let base64Str = imageData?.base64EncodedString()
+        delegate?.didRecieveTarget(base64: base64Str!)
     }
     
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
