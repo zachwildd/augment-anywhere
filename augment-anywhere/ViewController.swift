@@ -37,6 +37,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate {
         
         connectionHandler.delegate = self
         connectionHandler.mockRecieveNewTargetMessage()
+        connectionHandler.mockRecieveSecondTargetMessage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +47,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate {
         let configuration = ARImageTrackingConfiguration()
         
         configuration.trackingImages = referenceImages
-        configuration.maximumNumberOfTrackedImages = 1
+        configuration.maximumNumberOfTrackedImages = 2
         
         // Run the view's session
         sceneView.session.run(configuration)
@@ -70,9 +71,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate {
         return arImage
     }
     
+    var name = "1"
     func addTarget(image: UIImage) {
-        var referenceImage = loadImage(image: image)
-        referenceImages.insert(referenceImage)
+        let arImage = ARReferenceImage(image.cgImage!, orientation: CGImagePropertyOrientation.up, physicalWidth: 0.15)
+        arImage.name = name
+        name = "2"
+        referenceImages.insert(arImage)
         resetTracking()
     }
     
@@ -81,7 +85,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate {
         let configuration = ARImageTrackingConfiguration()
         
         configuration.trackingImages = referenceImages
-        configuration.maximumNumberOfTrackedImages = 1
+        configuration.maximumNumberOfTrackedImages = 2
         
         sceneView.session.run(configuration)
     }

@@ -55,6 +55,13 @@ class ConnectionHandler: WebSocketDelegate {
         delegate?.didRecieveTarget(base64: base64Str!)
     }
     
+    func mockRecieveSecondTargetMessage() {
+        let image = UIImage(named: "bitcamp2")
+        let imageData = image!.pngData()
+        let base64Str = imageData?.base64EncodedString()
+        delegate?.didRecieveTarget(base64: base64Str!)
+    }
+    
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         // TODO: handle disconnects
     }
