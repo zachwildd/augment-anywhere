@@ -152,6 +152,64 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
         addTarget(image: newTarget!)
     }
     
+    func createPlane() -> SCNNode {
+        
+        var planeMaterials = [SCNMaterial]()
+        let planeMaterial = SCNMaterial()
+        planeMaterial.diffuse.contents = UIColor.black
+        planeMaterials.append(planeMaterial)
+        
+        var textMaterials = [SCNMaterial]()
+        let textMaterial = SCNMaterial()
+        textMaterial.diffuse.contents = UIColor.white
+        textMaterials.append(textMaterial)
+        
+        // create plane
+        let planeBase = SCNNode()
+        let planeGeometry = SCNPlane(width: 0.15, height: 0.15)
+        planeGeometry.materials = planeMaterials
+        planeBase.geometry = planeGeometry
+        planeBase.position = SCNVector3(0, 0.05, 0)
+        planeBase.name = "plane"
+        
+        // create text
+        let textBase = SCNNode()
+        let textGeometry = SCNText(string: "hello world", extrusionDepth: 1)
+        textGeometry.materials = textMaterials
+        textBase.scale = SCNVector3(0.001, 0.001, 0.001)
+        textBase.geometry = textGeometry
+        textBase.position = planeBase.worldPosition
+        textBase.name = "text"
+        
+        // create side plane
+        var sidePlaneMaterials = [SCNMaterial]()
+        let sidePlaneMaterial = SCNMaterial()
+        sidePlaneMaterial.diffuse.contents = UIColor.gray
+        sidePlaneMaterials.append(sidePlaneMaterial)
+        
+//        let sidePlaneBase = SCNNode()
+//        let sidePlaneGeometry = SCNPlane(width: 0.15, height: 0.15)
+//        sidePlaneGeometry.materials = sidePlaneMaterials
+//        sidePlaneBase.geometry = sidePlaneGeometry
+//        sidePlaneBase.position = SCNVector3(0.15, 0, 0)
+//        sidePlaneBase.rotation = SCNVector4(0, 0.5, 0.2, 0)
+//        sidePlaneBase.name = "side-plane"
+        
+        // add add-plane button
+        let addPlaneButtonBase = SCNNode()
+        let addPlaneButtonGeometry = SCNPlane(width: 0.025, height: 0.025)
+        addPlaneButtonGeometry.materials = sidePlaneMaterials
+        addPlaneButtonBase.geometry = addPlaneButtonGeometry
+        addPlaneButtonBase.position = SCNVector3(0, 0, 0.01)
+        addPlaneButtonBase.name = "add-plane-button"
+        
+        planeBase.addChildNode(addPlaneButtonBase)
+        planeBase.addChildNode(textBase)
+//        planeBase.addChildNode(sidePlaneBase)
+        
+        return planeBase
+    }
+    
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         
         // if out of target image has been ddetected then get corresponding anchor
@@ -182,28 +240,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
             faceMaterials.append(material)
         }
         
-        var textMaterials = [SCNMaterial]()
-        for num in 0..<5 {
-            let material = SCNMaterial()
-            material.diffuse.contents = UIColor.white
-            textMaterials.append(material)
-        }
-        
-        // create plane
-        let planeBase = SCNNode()
-        let planeGeometry = SCNPlane(width: 0.01, height: 0.01)
-        planeGeometry.materials = faceMaterials
-        planeBase.geometry = planeGeometry
-        planeBase.position = SCNVector3(0, 0, 0)
-        let textBase = SCNNode()
-        let textGeometry = SCNText(string: "hello world", extrusionDepth: 1)
-        textGeometry.materials = textMaterials
-        textBase.scale = SCNVector3(0.001, 0.001, 0.001)
-        textBase.geometry = textGeometry
-        textBase.position = planeBase.position
-        
-        node.addChildNode(textBase)
-        node.addChildNode(planeBase)
+        let plane: SCNNode = createPlane()
+        node.addChildNode(plane)
         
         // create a box to add to the image
         let boxNode = SCNNode()
