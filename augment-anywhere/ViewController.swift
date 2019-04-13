@@ -169,13 +169,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
     }
     
     @objc func pressAddTarget() {
+        print("press add target")
         // pull up camera to take picture of target
+        performSegue(withIdentifier: "showAddTarget", sender: self)
         
-        imagePicker =  UIImagePickerController()
-        imagePicker!.delegate = self
-        imagePicker!.sourceType = .camera
-        
-        present(imagePicker!, animated: true, completion: nil)
+//        imagePicker =  UIImagePickerController()
+//        imagePicker!.delegate = self
+//        imagePicker!.sourceType = .camera
+//
+//        present(imagePicker!, animated: true, completion: nil)
     }
     
     // implement UIImagePickerControllerDelegate

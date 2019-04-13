@@ -34,11 +34,30 @@
                     <connections>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                         <segue destination="Iqd-Uz-COg" kind="show" identifier="loginVC" id="5Yl-mH-yqp"/>
+                        <segue destination="fXD-Yj-YCP" kind="show" identifier="showAddTarget" id="SNl-u7-7af"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="48" y="104"/>
+        </scene>
+        <!--Add Target View Controller-->
+        <scene sceneID="Jxa-KV-o0w">
+            <objects>
+                <viewController id="fXD-Yj-YCP" customClass="AddTargetViewController" customModule="augment_anywhere" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j9j-Qm-eny">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Hj1-Rd-tfm"/>
+                    </view>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="backToAR" id="jFq-Nb-F75"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s89-SD-4st" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="104"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fXJ-vO-ink">
@@ -59,4 +78,7 @@
             <point key="canvasLocation" x="-1028" y="104"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jFq-Nb-F75"/>
+    </inferredMetricsTieBreakers>
 </document>
