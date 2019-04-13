@@ -43,8 +43,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
         
         connectionHandler.delegate = self
         connectionHandler.socket.write(string: "hey fucker")
-        //connectionHandler.mockRecieveNewTargetMessage()
-        //connectionHandler.mockRecieveSecondTargetMessage()
+        connectionHandler.mockRecieveNewTargetMessage()
+        connectionHandler.mockRecieveSecondTargetMessage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,41 +104,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
         sceneView.session.pause()
     }
     
-    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        
-        // if out of target image has been ddetected then get corresponding anchor
-        guard let currentImageAnchor = anchor as? ARImageAnchor else { return }
-        
-        // get targets name
-        let name = currentImageAnchor.referenceImage.name!
-        
-        print("Image named \(name)")
-        
-        // create a box to add to the image
-        let boxNode = SCNNode()
-        let boxGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-        
-        // make each side a different color
-        let faceColours = [UIColor.red, UIColor.green, UIColor.blue, UIColor.cyan, UIColor.yellow, UIColor.gray]
-        var faceMaterials = [SCNMaterial]()
-        
-        // apply color to each side
-        for face in 0 ..< 5{
-            let material = SCNMaterial()
-            material.diffuse.contents = faceColours[face]
-            faceMaterials.append(material)
-        }
-        boxGeometry.materials = faceMaterials
-        boxNode.geometry = boxGeometry
-        
-        // set box position
-        boxNode.position = SCNVector3(0, 0.05, 0)
-        
-        // add box to node
-        node.addChildNode(boxNode)
-    }
-    
-    
     func setupUI() {
         print("arsceneview setup")
         
@@ -171,13 +136,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
     @objc func pressAddTarget() {
         print("press add target")
         // pull up camera to take picture of target
-        performSegue(withIdentifier: "showAddTarget", sender: self)
+        // performSegue(withIdentifier: "showAddTarget", sender: self)
         
-//        imagePicker =  UIImagePickerController()
-//        imagePicker!.delegate = self
-//        imagePicker!.sourceType = .camera
-//
-//        present(imagePicker!, animated: true, completion: nil)
+        imagePicker =  UIImagePickerController()
+        imagePicker!.delegate = self
+        imagePicker!.sourceType = .camera
+
+        present(imagePicker!, animated: true, completion: nil)
     }
     
     // implement UIImagePickerControllerDelegate
@@ -185,6 +150,70 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
         imagePicker!.dismiss(animated: true, completion: nil)
         let newTarget = info[.originalImage] as? UIImage
         addTarget(image: newTarget!)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
+        // if out of target image has been ddetected then get corresponding anchor
+        guard let currentImageAnchor = anchor as? ARImageAnchor else { return }
+        
+        // get targets name
+        let name = currentImageAnchor.referenceImage.name!
+        
+        print("Image named \(name)")
+        
+//        let base = SCNNode()
+//        let baseGeometry = SCNText(string: "text", extrusionDepth: 10)
+//        let material = SCNMaterial()
+//        material.diffuse.contents = UIColor.blue
+//        baseGeometry.materials = [material]
+//        base.geometry = baseGeometry
+//        base.position = SCNVector3(0, 0.05, 0)
+//        node.addChildNode(base)
+        
+        // make each side a different color
+        let faceColours = [UIColor.red, UIColor.green, UIColor.blue, UIColor.cyan, UIColor.yellow, UIColor.gray]
+        var faceMaterials = [SCNMaterial]()
+        
+        // apply color to each side
+        for face in 0 ..< 5{
+            let material = SCNMaterial()
+            material.diffuse.contents = faceColours[face]
+            faceMaterials.append(material)
+        }
+        
+        var textMaterials = [SCNMaterial]()
+        for num in 0..<5 {
+            let material = SCNMaterial()
+            material.diffuse.contents = UIColor.white
+            textMaterials.append(material)
+        }
+        
+        // create plane
+        let planeBase = SCNNode()
+        let planeGeometry = SCNPlane(width: 0.01, height: 0.01)
+        planeGeometry.materials = faceMaterials
+        planeBase.geometry = planeGeometry
+        planeBase.position = SCNVector3(0, 0, 0)
+        let textBase = SCNNode()
+        let textGeometry = SCNText(string: "hello world", extrusionDepth: 1)
+        textGeometry.materials = textMaterials
+        textBase.scale = SCNVector3(0.001, 0.001, 0.001)
+        textBase.geometry = textGeometry
+        textBase.position = planeBase.position
+        
+        node.addChildNode(textBase)
+        node.addChildNode(planeBase)
+        
+        // create a box to add to the image
+        let boxNode = SCNNode()
+        let boxGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+        boxGeometry.materials = faceMaterials
+        boxNode.geometry = boxGeometry
+        // set box position
+        boxNode.position = SCNVector3(0, 0.05, 0)
+        // add box to node
+        //node.addChildNode(boxNode)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

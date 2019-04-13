@@ -19,6 +19,8 @@
 		92D803F92261D630009A2C3E /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D803F82261D630009A2C3E /* ConnectionHandler.swift */; };
 		92D803FB226233DD009A2C3E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D803FA226233DD009A2C3E /* LoginViewController.swift */; };
 		92D803FD22625674009A2C3E /* AddTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D803FC22625674009A2C3E /* AddTargetViewController.swift */; };
+		92D8040222626833009A2C3E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8040122626833009A2C3E /* Message.swift */; };
+		92D8040422626874009A2C3E /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8040322626874009A2C3E /* MessageData.swift */; };
 		A65225EE7FB1AC443BEE0172 /* Pods_augment_anywhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E04E690F7C0FBD97909643 /* Pods_augment_anywhere.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		92D803F82261D630009A2C3E /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
 		92D803FA226233DD009A2C3E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		92D803FC22625674009A2C3E /* AddTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTargetViewController.swift; sourceTree = "<group>"; };
+		92D8040122626833009A2C3E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		92D8040322626874009A2C3E /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		9908F833BFA2A8C9F37B0DED /* Pods-augment-anywhere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-anywhere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere.debug.xcconfig"; sourceTree = "<group>"; };
 		CE6B11CFB703BEB49C5CD540 /* Pods-augment-anywhere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-anywhere.release.xcconfig"; path = "Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,15 +128,14 @@
 			children = (
 				92A1210D2261D39A002A2C1B /* AppDelegate.swift */,
 				92A1210F2261D39A002A2C1B /* art.scnassets */,
-				92A121112261D39A002A2C1B /* ViewController.swift */,
+				92D803FF226267F7009A2C3E /* View Controllers */,
 				92A1213D2261D3BF002A2C1B /* ARSceneView.swift */,
+				92D804002262681F009A2C3E /* Message */,
 				92A121132261D39A002A2C1B /* Main.storyboard */,
 				92A121162261D39B002A2C1B /* Assets.xcassets */,
 				92A121182261D39B002A2C1B /* LaunchScreen.storyboard */,
 				92A1211B2261D39B002A2C1B /* Info.plist */,
 				92D803F82261D630009A2C3E /* ConnectionHandler.swift */,
-				92D803FA226233DD009A2C3E /* LoginViewController.swift */,
-				92D803FC22625674009A2C3E /* AddTargetViewController.swift */,
 			);
 			path = "augment-anywhere";
 			sourceTree = "<group>";
@@ -153,6 +156,25 @@
 				92A121312261D39B002A2C1B /* Info.plist */,
 			);
 			path = "augment-anywhereUITests";
+			sourceTree = "<group>";
+		};
+		92D803FF226267F7009A2C3E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				92A121112261D39A002A2C1B /* ViewController.swift */,
+				92D803FA226233DD009A2C3E /* LoginViewController.swift */,
+				92D803FC22625674009A2C3E /* AddTargetViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		92D804002262681F009A2C3E /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				92D8040122626833009A2C3E /* Message.swift */,
+				92D8040322626874009A2C3E /* MessageData.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 		FD00FBED1A28877954DDC868 /* Pods */ = {
@@ -354,9 +376,11 @@
 				92D803F92261D630009A2C3E /* ConnectionHandler.swift in Sources */,
 				92A121122261D39A002A2C1B /* ViewController.swift in Sources */,
 				92A1210E2261D39A002A2C1B /* AppDelegate.swift in Sources */,
+				92D8040422626874009A2C3E /* MessageData.swift in Sources */,
 				92D803FD22625674009A2C3E /* AddTargetViewController.swift in Sources */,
 				92D803FB226233DD009A2C3E /* LoginViewController.swift in Sources */,
 				92A1213E2261D3BF002A2C1B /* ARSceneView.swift in Sources */,
+				92D8040222626833009A2C3E /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

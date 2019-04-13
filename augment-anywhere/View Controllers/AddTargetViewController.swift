@@ -14,6 +14,7 @@ class AddTargetViewController: UIViewController, UIImagePickerControllerDelegate
     
     var targetImageView: UIImageView = UIImageView()
     var backButton: UIButton = UIButton()
+    var takePictureButton: UIButton = UIButton()
     var addTargetButton: UIButton = UIButton()
     
     var imagePicker: UIImagePickerController?
@@ -46,33 +47,53 @@ class AddTargetViewController: UIViewController, UIImagePickerControllerDelegate
         backButton.autoPinEdge(.left, to: .left, of: view, withOffset: 10)
         backButton.autoPinEdge(.top, to: .top, of: view, withOffset: 10)
         
+        // setup take picture button
+        takePictureButton.backgroundColor = UIColor.blue
+        takePictureButton.autoSetDimension(.height, toSize: 100)
+        takePictureButton.autoSetDimension(.width, toSize: 100)
+        view.addSubview(takePictureButton)
+        takePictureButton.autoCenterInSuperview()
+        
         // setup add target button
-        addTargetButton.backgroundColor = UIColor.blue
-        addTargetButton.autoSetDimension(.height, toSize: 100)
-        addTargetButton.autoSetDimension(.width, toSize: 100)
+        addTargetButton.backgroundColor = UIColor.green
+        addTargetButton.autoSetDimension(.height, toSize: screenSize.height/20)
+        addTargetButton.autoSetDimension(.width, toSize: screenSize.width/2.5)
         view.addSubview(addTargetButton)
-        addTargetButton.autoCenterInSuperview()
+        addTargetButton.autoPinEdge(.left, to: .left, of: view, withOffset: (screenSize.width - screenSize.width/2.5)/2)
+        addTargetButton.autoPinEdge(.top, to: .bottom, of: takePictureButton)
         
     }
     
     func setupActions() {
         print("addtarget setup actions")
         backButton.addTarget(self, action: #selector(pressBackButton), for: .touchUpInside)
-        addTargetButton.addTarget(self, action: #selector(pressAddTargetButton), for: .touchUpInside)
+        takePictureButton.addTarget(self, action: #selector(pressTakePicture), for: .touchUpInside)
+        addTargetButton.addTarget(self, action: #selector(pressAddTarget), for: .touchUpInside)
     }
     
     @objc func pressBackButton() {
+        print("addtargetvc backbutton pressed")
         performSegue(withIdentifier: "backToAR", sender: self)
     }
     
-    @objc func pressAddTargetButton() {
+    @objc func pressTakePicture() {
         // pull up camera to take picture of target
+        print("addtargetvc take picture pressed")
         
         imagePicker =  UIImagePickerController()
         imagePicker!.delegate = self
         imagePicker!.sourceType = .camera
 
         present(imagePicker!, animated: true, completion: nil)
+    }
+    
+    @objc func pressAddTarget() {
+        // assume that we have already taken a picture and have a target to add
+        // assume that we have decided what mode to associate with our tare
+        // add the target
+        // make a call to server to add target
+        // save locally?
+        print("addtargetvc addtarget pressed")
     }
     
     // implement UIImagePickerControllerDelegate
@@ -85,7 +106,7 @@ class AddTargetViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     func addTarget(image: UIImage) {
-        print("called add target")
+        print("addtargetvc called add target for uiimage")
     }
     
 
