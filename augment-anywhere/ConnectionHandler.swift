@@ -23,7 +23,7 @@ class ConnectionHandler: WebSocketDelegate {
     // TODO: do core data stuff
     
     // create websocket connection to localhost server
-    let socket = WebSocket(url: URL(string: "ws://localhost:1337")!, protocols: ["chat"])
+    let socket = WebSocket(url: URL(string: "https://sodium-lodge-237501.appspot.com:8080")!, protocols: ["chat"])
     
     // designate delegate
     var delegate: ConnectionDelegate?

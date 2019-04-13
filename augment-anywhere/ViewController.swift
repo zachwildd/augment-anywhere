@@ -10,11 +10,17 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // ar view
     @IBOutlet var sceneView: ARSCNView!
     
+    // buttons
     var backButton: UIButton = UIButton()
+    var addTargetButton: UIButton = UIButton()
+    
+    // image picker
+    var imagePicker: UIImagePickerController?
     
     var referenceImages: Set<ARReferenceImage> = Set<ARReferenceImage>()
     
@@ -36,8 +42,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate {
         view.addSubview(sceneView)
         
         connectionHandler.delegate = self
-        connectionHandler.mockRecieveNewTargetMessage()
-        connectionHandler.mockRecieveSecondTargetMessage()
+        connectionHandler.socket.write(string: "hey fucker")
+        //connectionHandler.mockRecieveNewTargetMessage()
+        //connectionHandler.mockRecieveSecondTargetMessage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -135,19 +142,47 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate {
     func setupUI() {
         print("arsceneview setup")
         
+        // setup back button
         backButton.backgroundColor = UIColor.red
         backButton.autoSetDimension(.height, toSize: 100)
         backButton.autoSetDimension(.width, toSize: 100)
         view?.addSubview(backButton)
-        backButton.autoCenterInSuperview()
+        backButton.autoPinEdge(.left, to: .left, of: view, withOffset: 10)
+        backButton.autoPinEdge(.top, to: .top, of: view, withOffset: 10)
+        
+        // setup add target button
+        addTargetButton.backgroundColor = UIColor.gray
+        addTargetButton.autoSetDimension(.height, toSize: 100)
+        addTargetButton.autoSetDimension(.width, toSize: 100)
+        view?.addSubview(addTargetButton)
+        addTargetButton.autoPinEdge(.bottom, to: .bottom, of: view, withOffset: 10)
+        addTargetButton.autoPinEdge(.right, to: .right, of: view, withOffset: 10)
     }
     
     func setupActions() {
         backButton.addTarget(self, action: #selector(presentLoginVC), for: .touchUpInside)
+        addTargetButton.addTarget(self, action: #selector(pressAddTarget), for: .touchUpInside)
     }
     
     @objc func presentLoginVC() {
         performSegue(withIdentifier: "loginVC", sender: self)
+    }
+    
+    @objc func pressAddTarget() {
+        // pull up camera to take picture of target
+        
+        imagePicker =  UIImagePickerController()
+        imagePicker!.delegate = self
+        imagePicker!.sourceType = .camera
+        
+        present(imagePicker!, animated: true, completion: nil)
+    }
+    
+    // implement UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imagePicker!.dismiss(animated: true, completion: nil)
+        let newTarget = info[.originalImage] as? UIImage
+        addTarget(image: newTarget!)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
