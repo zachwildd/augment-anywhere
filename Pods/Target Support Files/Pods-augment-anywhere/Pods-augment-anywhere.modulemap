@@ -1,0 +1,6 @@
+framework module Pods_augment_anywhere {
+  umbrella header "Pods-augment-anywhere-umbrella.h"
+
+  export *
+  module * { export * }
+}

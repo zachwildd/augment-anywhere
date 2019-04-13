@@ -16,6 +16,8 @@
 		92A121252261D39B002A2C1B /* augment_anywhereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A121242261D39B002A2C1B /* augment_anywhereTests.swift */; };
 		92A121302261D39B002A2C1B /* augment_anywhereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1212F2261D39B002A2C1B /* augment_anywhereUITests.swift */; };
 		92A1213E2261D3BF002A2C1B /* ARSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1213D2261D3BF002A2C1B /* ARSceneView.swift */; };
+		92D803F92261D630009A2C3E /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D803F82261D630009A2C3E /* ConnectionHandler.swift */; };
+		A65225EE7FB1AC443BEE0172 /* Pods_augment_anywhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E04E690F7C0FBD97909643 /* Pods_augment_anywhere.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04E04E690F7C0FBD97909643 /* Pods_augment_anywhere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_augment_anywhere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A1210A2261D39A002A2C1B /* augment-anywhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "augment-anywhere.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A1210D2261D39A002A2C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A1210F2261D39A002A2C1B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		92A1212F2261D39B002A2C1B /* augment_anywhereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = augment_anywhereUITests.swift; sourceTree = "<group>"; };
 		92A121312261D39B002A2C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92A1213D2261D3BF002A2C1B /* ARSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneView.swift; sourceTree = "<group>"; };
+		92D803F82261D630009A2C3E /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
+		9908F833BFA2A8C9F37B0DED /* Pods-augment-anywhere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-anywhere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere.debug.xcconfig"; sourceTree = "<group>"; };
+		CE6B11CFB703BEB49C5CD540 /* Pods-augment-anywhere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-anywhere.release.xcconfig"; path = "Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65225EE7FB1AC443BEE0172 /* Pods_augment_anywhere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C30F8AE539C9ED2C6536F8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04E04E690F7C0FBD97909643 /* Pods_augment_anywhere.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		92A121012261D39A002A2C1B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +100,8 @@
 				92A121232261D39B002A2C1B /* augment-anywhereTests */,
 				92A1212E2261D39B002A2C1B /* augment-anywhereUITests */,
 				92A1210B2261D39A002A2C1B /* Products */,
+				FD00FBED1A28877954DDC868 /* Pods */,
+				5C30F8AE539C9ED2C6536F8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +126,7 @@
 				92A121162261D39B002A2C1B /* Assets.xcassets */,
 				92A121182261D39B002A2C1B /* LaunchScreen.storyboard */,
 				92A1211B2261D39B002A2C1B /* Info.plist */,
+				92D803F82261D630009A2C3E /* ConnectionHandler.swift */,
 			);
 			path = "augment-anywhere";
 			sourceTree = "<group>";
@@ -131,6 +149,15 @@
 			path = "augment-anywhereUITests";
 			sourceTree = "<group>";
 		};
+		FD00FBED1A28877954DDC868 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9908F833BFA2A8C9F37B0DED /* Pods-augment-anywhere.debug.xcconfig */,
+				CE6B11CFB703BEB49C5CD540 /* Pods-augment-anywhere.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92A121342261D39B002A2C1B /* Build configuration list for PBXNativeTarget "augment-anywhere" */;
 			buildPhases = (
+				96743F194E56A797F17F7C3A /* [CP] Check Pods Manifest.lock */,
 				92A121062261D39A002A2C1B /* Sources */,
 				92A121072261D39A002A2C1B /* Frameworks */,
 				92A121082261D39A002A2C1B /* Resources */,
+				4E01145CF75A0D075D2DDD0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,11 +287,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E01145CF75A0D075D2DDD0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-augment-anywhere/Pods-augment-anywhere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96743F194E56A797F17F7C3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-augment-anywhere-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92A121062261D39A002A2C1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D803F92261D630009A2C3E /* ConnectionHandler.swift in Sources */,
 				92A121122261D39A002A2C1B /* ViewController.swift in Sources */,
 				92A1210E2261D39A002A2C1B /* AppDelegate.swift in Sources */,
 				92A1213E2261D3BF002A2C1B /* ARSceneView.swift in Sources */,
@@ -438,6 +517,7 @@
 		};
 		92A121352261D39B002A2C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9908F833BFA2A8C9F37B0DED /* Pods-augment-anywhere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +536,7 @@
 		};
 		92A121362261D39B002A2C1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6B11CFB703BEB49C5CD540 /* Pods-augment-anywhere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
