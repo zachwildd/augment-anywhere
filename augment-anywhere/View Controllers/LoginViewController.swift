@@ -8,12 +8,15 @@
 
 import UIKit
 import PureLayout
+import SwiftyJSON
+import ARKit
 
 class LoginViewController: UIViewController {
     
     var loginButton: UIButton = UIButton()
     var backgroundImage: UIImageView = UIImageView()
-    
+    var sharedInstance = ConnectionHandler.sharedInstance
+    let screenSize = UIScreen.main.bounds
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +53,14 @@ class LoginViewController: UIViewController {
     
     @objc func tryLogin() {
         print("try login")
+
+//        // encode anchor to base64 and send it over websocket
+//        let image = UIImage(named: "bitcamp")
+//        let imageData = image!.pngData()
+//        let strBase64 = imageData?.base64EncodedString()
+        
+        let cubeScene: CubeScene = CubeScene(json: JSON(), name: "0")
+        cubeScene.buildScene()
         
         // navigate to viewcontroller
         self.performSegue(withIdentifier: "ar", sender: self)
