@@ -105,6 +105,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
         arImage.name = name
         referenceImages.insert(arImage)
         resetTracking()
+        scenes[name] = CubeScene(json: JSON(), name: name)
     }
     
     // adds new tracking images to images actively tracked
@@ -254,6 +255,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ConnectionDelegate, U
         
         let targetID = Int(targetName)
         print(scenes)
+        let connectHandler = ConnectionHandler.sharedInstance
         let targetScene: CubeScene = scenes[String(targetID!)]!
         currentScene = targetScene
         
