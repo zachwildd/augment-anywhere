@@ -8,7 +8,7 @@ reality spaces.
 These gifs demonstrate the app's two main features; adding target images & building on those target images. The first gif shows
 a user adding a new target image (multiple can be added). The second shows the user building a flower in the 3D space 
 associated with that target image. Users can add as many target images as possible which allows them to have seperate augmented 
-reality spaces placed around the room and across campus.
+reality spaces placed around the room, across campus, etc. -- ergo augment anywhere.
 
 <p align="center">
   <img src="demo/add_target_demo.gif">
